@@ -1,18 +1,23 @@
-This pull request adds a short documentation section that proposes an explicit “Sort by date created” option for GitHub Issues.
+# Proposal: “Sort by date created” for GitHub Issues
 
-What this PR does
-Adds a new subsection to the documentation that describes a “Sort by date created” option in the Issues list UI.
+This document describes a feature idea for GitHub Issues: an explicit option to sort issues by their creation date.
 
-Explains that users could sort issues strictly by their creation date (newest → oldest and oldest → newest).
+## Problem
 
-Highlights how this option would appear in the existing “Sort” dropdown for issues.
+In large repositories, maintainers and contributors often need to focus either on the most recently created issues or on very old, still open issues.  
+Currently, the Issues list offers several sort options (such as newest, oldest, most commented), but there is no clearly labeled, easily discoverable mode that sorts purely by the creation date across repositories.[web:55]
 
-Why this change is useful
-In large repositories, maintainers and contributors often need to focus either on the most recently created issues or on very old, still open issues. A clearly labeled “Sort by date created” option would make this workflow much easier to discover and use.
+## Proposed solution
 
-It documents a concrete UX improvement idea that could later be implemented in the product, and gives users a clearer mental model of how issue sorting could work.
+Add a dedicated “Sort by date created” option to the Issues sort control:
 
-How it was tested
-Verified that the new documentation page builds correctly and renders without formatting issues.
+- “Date created (newest first)”
+- “Date created (oldest first)”
 
-Checked that internal links and headings are consistent with the existing documentation structure.
+These options would appear in the existing **Sort** dropdown and order issues strictly by their creation timestamp.
+
+## Benefits
+
+- Faster triage of new issues in busy repositories.  
+- Easier review of very old, still unresolved issues in chronological order.  
+- A clearer mental model for users, because the sort option is explicitly tied to the creation date instead of being hidden behind generic labels.
